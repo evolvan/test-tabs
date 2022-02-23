@@ -1,0 +1,267 @@
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #4897ad;
+  width: 30%;
+  padding: 5px 5px;
+  align-self: stretch;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  height: 65px;
+  position: relative;
+  font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #cbcdce;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #407e8f;
+  color: #cbcdce;
+}
+
+button.tablinks::after {
+  content: "";
+  /* border: 1px solid #5aa1b5; */
+  display: block;
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background: #5aa1b5;
+}
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0 2em 2em 2em;
+  width: 70%;
+  border-left: none;
+  background: #3d4247;
+  color: #fff;
+}
+
+.tab-content-inner {
+  width: 100%;
+  position: relative;
+}
+.text-center {
+  text-align: center;
+}
+.content-title{
+  position: relative;
+  color: #fff;
+}
+.content-title::after {
+  content: "";  
+  display: block;
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 1.5em;
+  height: 2px;
+  background: #cbcdce;
+}
+.content-body {
+  width: 100%;
+  float: left;
+  text-align: left;
+}
+/* .content-img {
+  width: 25%;
+  float: left;  
+} */
+.rounded-img {
+  width: 270px;
+  float: right;
+  margin-left: 10px;
+  margin-right: -100px;
+}
+.content-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.links-btn {
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: 1px solid;
+  margin-left: 5px;
+  text-decoration: none;  
+  font-size: 15px;
+    font-weight: normal;
+}
+.links-btn.link-2 {
+  background: #d5212d;
+  color: #fff;
+  border-color: #d5212d;
+}
+.links-btn.link-1 {
+  color: #fff; 
+}
+.content-sub-heading {
+  text-transform: uppercase;
+}
+.icon-img{
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.tabs-main {
+  display: flex;
+}
+.bag-img {
+  width: 20px;
+  margin-right: 10px;
+}
+.tablinks .fa-plus, .tablinks .fa-minus{
+  display: none;
+}
+.loader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media only screen and (min-device-width: 768) and (max-device-width: 1024) and (orientation: portrait){
+
+}
+@media only screen and (max-width: 992px) {
+	.tab button {   
+    padding: 10px 5px;   
+    font-size: 12px;   
+}
+.rounded-img {
+  width: 250px;
+  float: right;
+  margin-left: 10px;
+  margin-right: -67px;
+}
+}
+@media only screen and (max-width: 480px) {
+  .global-header{
+    margin: 0rem !important;
+  }  
+  .cases-main{
+    padding: 0rem !important;
+  }
+  .content-title::after{
+    display: none;
+  }
+  .tab{
+    width: 100% ;
+  }
+  .tabcontent{
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  .tabs-main {
+    display: block;
+  }
+  .content-title{
+    margin-top: 10px;
+  }
+  .content-sub-heading{
+    font-size: 14px;
+  }
+  .header-title{
+    margin: 0rem !important;
+    height: 8rem;
+    text-align: center;
+  }
+  .header-title h1{
+    padding-top: 3rem;
+    color: white;
+    margin-top: 0rem;
+    font-size: x-large;
+  }
+  footer {
+    height: 8rem;
+    padding-top: 3rem;
+    margin: 0rem !important;
+    /* text-align: center; */
+  }
+  .clear{
+    display: none;
+  }
+  .content-body{   
+    text-align: left;
+  }
+  .rounded-img {
+    shape-outside: circle(50%);
+    float: right;
+    margin-right: -15px;
+    width: 60%;
+    max-width: 350px;
+  }
+  .tablinks .fa-plus, .tablinks .fa-minus{
+    display: inline;
+    float: right;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  .tablinks .fa-minus{
+    background-color: #6A7C7E;
+  }
+  button.tablinks::after{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  button.tablinks::after{
+    width: 100%;
+  }
+  .tab button{
+    font-size: 12px;
+  }
+  .content-title {
+    margin-top: unset;
+    font-size: 15px;
+}
+  .content-sub-heading {
+    font-size: 12px;
+}
+.content-body {
+  text-align: left;
+  font-size: 12px;
+}
+.links-btn { 
+  font-size: 12px;  
+}
+p.spacer {
+  margin: 5px;
+}
+}
