@@ -239,6 +239,12 @@ button.tablinks::after {
   button.tablinks::after{
     width: 100%;
   }
+  .tabs-main.mobile {
+    display: block;
+  }
+  .tabs-main {
+    display: none;
+  }
 }
 @media only screen and (max-width: 320px) {
   button.tablinks::after{
@@ -264,4 +270,19 @@ button.tablinks::after {
 p.spacer {
   margin: 5px;
 }
+}
+.close {
+  height: 0rem;
+  transition: height 0.25s linear;
+  overflow: hidden;
+}
+.open{
+  transition: height 0.25s linear;
+  height: 600px;
+}
+.mobile {
+  display: none;
+}
+.mobile .close{
+  padding: 0 1rem 0;
 }
