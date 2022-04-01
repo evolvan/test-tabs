@@ -278,7 +278,7 @@ p.spacer {
 }
 .open{
   transition: height 0.25s linear;
-  height: 600px;
+  height: auto;
 }
 .mobile {
   display: none;
