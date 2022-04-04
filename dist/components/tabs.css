@@ -239,6 +239,12 @@ button.tablinks::after {
   button.tablinks::after{
     width: 100%;
   }
+  .tabs-main.mobile {
+    display: block;
+  }
+  .tabs-main {
+    display: none;
+  }
 }
 @media only screen and (max-width: 320px) {
   button.tablinks::after{
@@ -264,4 +270,31 @@ button.tablinks::after {
 p.spacer {
   margin: 5px;
 }
+}
+.close {
+  height: 0rem;
+  transition: height 0.25s linear;
+  overflow: hidden;
+}
+.open{
+  transition: height 0.25s linear;
+  height: auto;
+}
+.mobile {
+  display: none;
+}
+.mobile .close{
+  padding: 0 1rem 0;
+}
+.fadeRight{
+  animation: fadeInRight 1s ease-in-out;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
 }

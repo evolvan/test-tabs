@@ -74,8 +74,8 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
                         <div className="content-sub-heading text-center">{currentData[0]?.subTitle}</div>
 
                         <p className="spacer">&nbsp;</p>
-                        <div className="mobi-flex">
-                        <div className="content-body" dangerouslySetInnerHTML={{__html:`<img src=${currentData[0]?.img} class="rounded-img" alt="Image not found"/>`+currentData[0]?.body}}></div>
+                        <div className="mobi-flex">                        
+                            <div className="content-body" dangerouslySetInnerHTML={{__html:`<img src=${currentData[0]?.img} class="rounded-img fadeRight" alt="Image not found"/>`+currentData[0]?.body}}></div>
                         </div>
                         <div className="content-links-container">
                             <div className="links">
@@ -106,7 +106,9 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
                 data.map((button, i) => {
 
                     const currentClass = button?.index === currentTabs ? ' tablinks active' : 'tablinks';
-                    const currentIcon =  currentClass  === ' tablinks active' ? faMinus : faPlus;
+                    const currentIcon  =  currentClass === ' tablinks active' ? faMinus : faPlus;
+                    const fadeClass    = button?.index === currentTabs ? "rounded-img fadeRight" : "rounded-img";
+       
                     return (
                         <>
                             <button type="button" key={button?.id} className={currentClass} onClick={() => handleClicks(button?.index)}>
@@ -123,7 +125,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
                                         <p className="spacer">&nbsp;</p>
                                         <div className="mobi-flex">
-                                        <div className="content-body" dangerouslySetInnerHTML={{__html:`<img src=${data[i]?.img} class="rounded-img" alt="Image not found"/>`+data[i]?.body}}></div>
+                                        <div className="content-body" dangerouslySetInnerHTML={{__html:`<img src=${data[i]?.img} class="${fadeClass}" alt="Image not found"/>`+data[i]?.body}}></div>
                                         </div>
                                         <div className="content-links-container">
                                             <div className="links">
@@ -137,7 +139,6 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
                                         </div>
                                     </div>
                                 </>
-                                : 
                                
                             </div>
 
